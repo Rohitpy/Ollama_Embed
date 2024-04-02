@@ -1,0 +1,856 @@
+Question,Answer
+Alarm Management,An Alarm Management System refers to the component or software solution that monitors and manages alarms related to security and access control events within a physical environment
+To Configure Alarm Managment.,"To configure Alarm Management following modules should be configured : Alarm Class, Escalation, Instruction, Remarks, Alarm Policy, Policy Assignment"
+Alarm Class,"In this, you can create a particular type of alarm based on the priority level, such as Critical, Warning, Attention & Normal. These alarm classes can be color-coded."
+How to configure Alarm Class ?,"1. Login in the Access360 web application
+2. Click on the Security View icon top menu bar (3rd from the right side)
+3. Select Alarm Management (Top menu bar) > Click on Alarm Class
+4. Choose the Alarm Type from the drop-down list
+5. Choose a back color and text color from the drop-down list
+6. Click on save to complete the settings
+"
+Escalation,"In this section, you can escalate the alarm to different authorization levels based on the duration.
+
+"
+How to configure Escalation ?,"Steps:
+1. Login in the Access360 web application
+2. Click on the Security View icon top menu bar (3rd from the right side)
+3. Select Escalation (Top menu bar) > Click on Add New button
+4. Define the name of the Escalation Policy
+5. Select the level of Escalation from the drop-down list.                                                             
+6. Enter the Employee ID, Time Duration & Duration Type (Minute, Hour, Days)
+7. Click on the checkbox to Escalate to Branch option and Select Time Duration & Duration Type (Minute, Hour, Days)
+8. Click on save to complete the settings        
+Notes:
+Escalate to Employee : Based on the severity of the situation, you can escalate the alarm to a maximum of 5 employees based on their roles and responsibilities.
+Escalate to Branch option :You can also escalate the alarm to the entire branch or branch by selecting the checkbox of Escalate to Branch. 
+It will send the alarm to not only the parent branch but it will also send it to the 
+child branch (Manage the Branch Hierarchy in Settings->Master Configuration->Branch Hierarchy)
+
+"
+Instruction,This section is designed to create the message that needs to be put in the alarm escalated to the employee(s). Instructions are to be put in correspondence with the level of Escalation defined in the previous section.
+How to configure Instruction,"Step - 
+
+1. Login in the Access360 web application
+2. Click on the Security View icon top menu bar (3rd from the right side)
+3. Select Instruction (Top menu bar) > Click on Add New button
+4. Enter the Name of the Alarm Instruction
+5. Define the Instruction depending upon the levels defined in the levels of Escalation
+6. Click on Save to complete the setting
+"
+Remarks,This section is designed to create the Remark that needs to be put in the alarm escalated to the employee(s). Remarks are to correspond with the instructions defined in the previous section.
+How to configure Remarks ?,"Step - 
+
+1. Login in the Access360 web application
+2. Click on the Security View icon top menu bar (3rd from the right side)
+3. Select Remarks (Top menu bar) > Click on Add New button
+4. Enter the Name of the Alarm Remarks
+5. Define the Remark (s) depending upon the levels defined in the levels of Escalation
+6. Click on Save to complete the setting
+
+"
+Alarm Policy,This section is designed to set the policy required to escalate the alarm to the respective employee(s) based on the given parameters.
+How to configure Alarm Policy?,"Steps: 
+1.	Login in the Access360 web application
+2.	Click on the Security View icon top menu bar (3rd from the right side)
+3.	Select Alarm Policy (Top menu bar) > Click on Add New button.
+4.	Enter the Policy Name
+5.	Select the priority of the alarm. If the situation is to be addressed immediately, keep it on the highest priority (e.g.: Between 1 to 999)
+6.	Select the alarm classification from the drop-down list (Normal, Warning, Critical, Attention)
+7.	Tick the Checkbox of Acknowledgement Required if you want to make it compulsory for the employee(s) to acknowledge the alarm notification.
+8.	Tick the Checkbox of Remark Compulsory if you want to make it compulsory for the employee(s) to see the remarks.
+9.	Choose the escalation policy from the drop-down list.
+10.	Choose the Instruction from the drop-down list.
+11.	Choose the remarks from the drop-down list.
+12.	In the Notification Policy section, select the E-mail or SMS options to send the alarm.
+13.	Search and select the employees based on emp ID
+14.	Click on Save to complete the Policy setting.   
+                                                                                                                                                                                                                                                               Prerequisites: Employee ID, Escalation, Instruction, and Remark must be configured.
+
+"
+Policy Assignment,"This section is designed to assign the alarm policy to the Event Source (Controller. Reader, Input) and Event Type to start sending alarms to the selected user(s)."
+How to configure Policy Assignment:           ,"Step - 
+
+1. Login in the Access360 web application
+2. Click on the Security View icon top menu bar (3rd from the right side)
+3. Select Policy Assignment (Top menu bar) 
+4. Select Event Source.
+
+There are three types of Event Sources - Reader, Input, and Controller
+Select an Event Source according to your requirement.
+"
+Policy Assignment for Reader Source,"In this case, you can assign the alarm policy to notify an Event Type that occurs during the operation of the reader(s), such as Door Open or Grant Access. etc.
+1. Select the Event Type
+2. Choose the reader(s) from the list
+3. Select the Alarm Policy & click on Assign
+4. Click on Save Changes to complete the setting.
+
+Notes:
+Grant Access: If the user has been granted access to the door
+Deny Access: If the reader has been denied access to the door
+Door Open: If the door has been opened by the user
+Door Held: If the door has been held open after the defined period of time
+Door Force: If the door has been forcefully opened
+Tamper: If the reader has tampered
+"
+Policy Assignment for Input Source,"In this case, you can assign the alarm policy to notify an Event Type that occurs during the operation of the Input (s), such as Input Activated, etc.
+Select the Event Type
+Choose the Input Device(s) from the list
+Select the Alarm Policy & click on Assign
+Click on Save Changes to complete the setting.
+"
+Policy Assignment for Controller Source,"In this case, you can assign the alarm policy to notify an Event Type that occurs during the operation of the controller(s), such as Controller Disconnected, etc.
+Select the Event Type
+Choose the controller(s) from the list
+Select the Alarm Policy & click on Assign
+Click on Save Changes to complete the setting.
+"
+Area Control,This module is designed to manage the area control settings of the controller.
+How to configure Area Control ?,"To configure Area Control these modules need to be configured : Adjacent Controllers Grouping, Area configuration, Real Anti-pass back configuration / Timed Anti pass back configuration.
+Prerequisites:
+Controllers and Readers must be added and configured."
+Adjacent Controllers in Area Control,"you can group the adjacent controllers into one to assign various commands such as anti-pass back to it.
+"
+How to group Adjacent Controllers ?,"
+1. Login in the Access360 web application.
+2. Click on the Security View icon top menu bar (3rd from the right side)
+3. Select Area Control (Top menu bar) > Click on Adjacent Controller option
+4. Select make and click on Add New to create a new group
+5. Specify a name to the group of controllers
+6. Select the controllers to be grouped together from unassigned controllers to assigned controllers
+7. Click on Save to complete the setting"
+Area in Area Control,"Areas are basically an assumption. Here we assume Area 0 is the starting area (Outside company). For area control, 'In Area' and 'Out Area' are compulsory.
+'In Area' is the setting used to set the area the reader is the entry reader for.
+'Out Area' is the setting used to set the area the reader is the exit reader for."
+How to configure Area?,"1. Login in the Access360 web application.
+2. Click on the Security View icon top menu bar (3rd from the right side)
+3. Select Area Control (Top menu bar) > Click on Area Configuration option
+4. Select Make and click on Add New to create a new group
+5. Select the Adjacent Controller Group name and Click on Add New Area
+6. ID and name are generated automatically on a serial-wise basis
+7. Define Alias name for the area
+8. Click on Save and then click on update controller to complete the setting."
+Real Anti-pass back,"Real Anti-pass back prevents tailgating by the users and maintain security of the entire access
+control ecosystem. A user can only exit the area that they have entered and
+exit an area that they have previously entered. If this pattern is disturbed in
+any way, such as by way of flashing the card twice on the entry/ exit reader,
+using a single card by two users, the rule of real anti-pass back gets
+activated."
+How to Configure Real Anti-pass back ?,"1. Login to the Access360 web application.
+2. Click on the Security View icon top menu bar (3rd from the right side)
+3. Select Area Control (Top menu bar) > Click on the Real Anti-pass back option
+4. For every entry, an In Area has been defined in the Area Configuration; select that area from the drop-down list
+5. For every exit, an Out Area has been defined in the Area Configuration; select that area from the drop-down list
+6. Click on save to complete the settings                                                                                                                                                                                                           Notes: 
+Real Anti-Pass back/Area Control is also configurable to the response when someone breaks area control. The following are the options:
+Off - No APB
+Soft Anti-Pass back - Log the violation, grant a cardholder access
+Hard Anti-Pass back - Log the violation, deny cardholder access"
+Timed Anti pass back ,"The functionality of anti-pass back is based on the rule of the in-out-in-out-in-out pattern. If the user flashes his card on the in-reader and passes his card to his friend to use it again for the in-reader or flashes the card twice on the reader, it will create the pattern of in-in, which will activate the anti-pass back rule, and access will be denied. Timed anti-pass back signifies that a designated amount of time must pass before an access card may be used at the same reader again."
+How to configure Timed Anti pass back ?,"Steps to configure Timed Anti Pass back
+1. Login in the Access360 web application.
+2. Click on the Security View icon top menu bar (3rd from the right side)
+3. Select Area Control (Top menu bar) > Click on the Real Anti-pass back option
+4.  For every reader, set the area control to time to enable the timed anti-pass back setting
+5. Define the timeout, which is the time in seconds to lockout users if they flash their card.
+6. The timeout timer begins with a card read and counts down to 0. Once it hits 0, the user can again gain access.
+7. Click on save to complete the settings
+Notes: 
+1. Timed anti-pass back is independent of the adjacent controller group.
+2. For timed anti-pass back, the 'Time Out' value is compulsory.
+3. Timeout is time in seconds to lockout users if they represent their card.
+4. The timeout timer begins with a card read and counts down to 0. Once the timer hits 0, a user can once again gain access.
+5. Timeout time ranges between 0 to 65535 seconds.
+6. Timed Anti-pass back is also configurable to the response when someone violates the lockout time. The following are the options:
+7. Off - No APB (default)
+8. Reader Based - prevent the same card from allowing consecutive access within a specified time.
+9. User Based - prevent the same card from allowing non-consecutive access at the same reader within a specified time.
+10. Real and Timed anti-pass back are mutually exclusive, i.e one reader can be configured as either real or timed anti-pass back.
+"
+Manage Controller,"In this module we can:
+Add, edit and delete controller.
+Add SIO, Readers
+Complete Advance configuration, IO mapping"
+,
+How to Add or configure a New Controller ?,"1. Login to Access360 Web-application
+2. Click on the Security View icon top menu bar (3rd from the right side)
+3. Select Controller (Top menu bar) > Manage Controller
+4. Click on the ""Search New"" icon on the right-hand side of the grid view
+5. Select the make of the Controller.
+6. Type the MAC Address of the Controller
+7. Click on Search
+8. Select the Controller and click on add to this branch to assign the Controller to the current facility.  Prerequisites
+Hardware Configuration should be completed of the Controller.
+Minimum Configuration required -Network Setting, Host IP Address and Port No. 
+                                                                             "
+ SIO/Interface,"The interface panel acts as an intermediary, connecting elements such as card readers, electronic locks, sensors, and other access control devices to the master controller panel. The Interface does not carry any onboard database for localized decision-making"
+How to Add New SIO?,"1. Login to Access360 Web-application
+2. Click on the Security View icon top menu bar (3rd from the right side)
+3. Select Controller (Top menu bar) > Manage Controller
+4. Click on the ""Pen"" icon on the right-hand side of the grid view for the respective Controller
+5. Click on Add New SIO
+6. Select on Board or RS485-1/RS485-2
+7. Select the make and Interface Address as configured on the SIO using DIP switches 
+8. as explained in the respective hardware SIO manual.
+9. Click on Save to complete the configuration.                                                                                          
+Prerequisites
+Hardware Configuration should be completed of the SIO.                                                  
+Minimum required settings - DIP switch configuration                                                                                 Note - Same steps are applicable for all SIO except SIO MR62E.
+"
+SIO MR62E ,It is IP based SIO. We can connect it on LAN(Local Area Network).
+How to Add Mercury MR62E SIO ?,"1. Login to Access360 Web-application
+2. Click on the Security View icon top menu bar (3rd from the right side)
+3. Select Controller (Top menu bar) > Manage Controller
+4. Click on the ""Pen"" icon on the right-hand side of the grid view for the respective Controller
+5. Click on Add New SIO
+6. Select Type - MR62E
+7. Define IP Address of the MR62E SIO
+8. Click on Save to complete the configuration.
+"
+Adding New Reader,The purpose of adding readers to this system is to enhance security and control over physical access by accurately identifying and verifying the identity of individuals attempting to enter or exit specific locations. 
+How to Add New Reader?,"1. Login to Access360 Web-application
+2. Click on the Security View icon top menu bar (3rd from the right side)
+3. Select Controller (Top menu bar) > Manage Controller
+4. Click on the ""Pen"" icon on the right-hand side of the grid view for the respective Controller
+5. Click on the Config option for the respective Interface
+6. Select the reader protocol from the drop-down list to choose the OSDP or Wiegand option
+7. Click on the check box and select Card In - Card Out option    
+8. Click the checkbox positioned against respective readers to activate it.
+9. Set Reader parameters
+10. Click on Save to complete the configuration.
+Prerequisites
+Controller and SIO should be added and configured."
+Reader Name in Reader parameters," Define the Reader's name, which helps in identifying its status for the Door Status tab, Events tab, and Web Configuration utility
+"
+Reader Type in Reader parameters," Define the reader type in the Type section:
+1. In: The entry-reader to an area
+2. Out: The exit reader to an area
+3. Login: The Software marks the entry of the day as Attendance Login for a specific user  
+4. Logout: The Software marks the exit of the day as Attendance Logout for a particular user  
+5. Log in/out:Alternative login-logout: the Software marks the first entry of the day as attendance login and the second as logout for a specific user
+6. Except first, all logout: the Software marks the first entry as login and all subsequent flashes as logout for a specific user
+"
+Access Control in Reader parameters," This option allows the user to select a type of access to be mapped 
+with the Reader, such as door, turnstile, or none.
+"
+Grant Access Time in Reader parameters,"It is the maximum time in seconds to open the door after 
+accesspermission is granted. The default value of Grant Access Time is 6 seconds. 
+The customized value can be defined within the range of 0 to 254 seconds.
+"
+Ext. Access Time in Reader parameters," This option enables the user to activate an extendable time for 
+the readers to stay open (in the case of handicapped, old people, etc)
+"
+Min.Open Time in Reader parameters,"This option denotes the relay time, i.e., the minimum time for 
+which the relay stays activated.
+"
+Rex Input in Reader parameters,"REX (Request to Exit) is an additional exit push-button hardware 
+integrated with the Controller to enable the user to exit either in an emergency 
+situation or if Reader is installed only at the entry gate. Click the checkbox to enable 
+this feature.
+"
+Door Held Time in Reader parameters,"It is the maximum time (in seconds) for which a door can be held 
+open without any Door Held alert.
+"
+Offline Mode in Reader parameters,"In case of disconnection with the Software, the Controller saves the 
+data in its memory in case of No change option.                                                                                               In Disable reader, no REX setting, the Reader will be disabled (no data will pass), 
+and REX input will be disabled. 
+Unlimited access will be granted to the users in the case of Unlock 
+(Unlimitedaccess) setting. 
+The access will be denied to the users in the option of Locked (No access, 
+REX active) and only the REX input will be activated.
+In the Format card only option, only access to format cards will be granted 
+(Configuredwhile adding access cards in the Software)."
+OSDP Baud Rate in Reader parameters," Select the baud rate of OSDP to make it run on it. By default, 
+it is set on 9600 BPS in the case of ICAero X1100
+"
+Advance Control in Reader parameters,"In this option, you can either choose it to stay on None, 
+Two Man Rule or Double Tap option. With the Two Man Rule option, 
+access will be granted to a facility only if two people flash their access cards on 
+the Reader consecutively. 
+With the Double Tap option, the user must double-tap his access card twice on 
+the Reader within 5 seconds to activate a command. More details about it are available 
+in the I/O linking section, explained below in the next section.
+"
+Advanced Configuration of Controller/SIO/Interface,The purpose of Advance Configuration is to activate inputs and outputs which are available in Controller and SIO.
+How to do Advanced Configuration of SIO/Interface?,"1. Login to Access360 Web-application
+2. Click on the Security View icon top menu bar (3rd from the right side)
+3. Select Controller (Top menu bar) > Manage Controller
+4. Click on the ""Pen"" icon on the right-hand side of the grid view for the respective Controller
+5. Click on the Config option for the respective On-Board SIO or RS485
+6. Click on the Advance Configuration option (2nd from the right-hand side of the grid view)
+7. Click on the check box to activate the required Input (Also configure Input parameters) and output(Also configure output parameters).    
+8. Click on Save to complete the configuration.                                                                                                       Prerequisites: Controller and SIOshould be added and configured
+"
+Output Parameters,"Output relays can have 6 different working behaviors: Normal - Offline (No Change) ,Inverted - Offline (No Change),Normal - Offline (Inactive), Inverted - Offline (Inactive), Normal - Offline (Active),Inverted - Offline (Active). Check box to switch event logs ON or OFF in the Software. Offline features are applicable for interfaces only.
+"
+Normal - Offline (No Change) ,"When an interface goes offline, it is configured relay state will remain unaffected.
+e.g., If Relay is activated (at COM-NO position) and Interface goes offline then Relay will remain at activated position only. Output will be shown as activated in the Software when Relay is at COM-NO.
+"
+Inverted - Offline (No Change) ,"When an interface goes offline, it's configured relay state will remain unaffected. 
+e.g., If Relay is activated (at COM-NC position) and Interface goes offline then Relay will remain at the activated position only. The output will be shown as activated in the Software only when the Relay is at COM-NC.
+"
+Normal - Offline (Inactive) ,"When Interface goes offline, configured Relay getsdeactivated.                                                                 
+e.g., If Relay is activated (at COM-NO position) and Interface goes offline, then the Relay will switch to COM-NC. The output will be shown as activated in the Software when the Relay is at COM-NO."
+Inverted - Offline (Inactive) ,"When Interface goes offline, configured Relay gets deactivated. 
+e.g., If Relay is activated (at COM-NC position) and Interface goes offline, then the Relay will switch to COM-NO. The output will be shown as activated in the Software only when the Relay is at COM-NC.
+"
+Normal - Offline (Active) ,"When Interface goes offline, configured Relay gets activated.                                                                   
+e.g., If Relay is activated (at COM-NO position) and Interface goes offline, then the Relay will remain at COM-NO position. The output will be shown as activated in the Software when the Relay is at COM-NO.
+"
+Inverted - Offline (Active),"When Interface goes offline, configured Relay gets activated.                                                                   
+e.g., If Relay is activated (at COM-NC position) and Interface goes offline, then the Relay will remain at COM-NC position. The output will be shown as activated in the Software only when Relay is at COM-NC."
+Input Parameters,"These are the input parameters: Input, Input Name, Input Type, Normal State, Debounce, Hold time, Open all doors"
+Input,Activate the inputs by clicking the checkbox
+Input Name in Input parameter,"the respective input name, such as tamper fail, battery fail, etc."
+Input Type in Input parameters,"Map the Input with input type such as emergency exit door, fire alarm or others. It means that if any of the input types gets activated, it will send a signal to the Software to activate the assigned Input and the correspondingoutput.                                                          
+                  
+For example: In case of an earthquake, if the emergency exit door is opened, it will send a signal to the Software to activate the Input mapped with it, which will initiate the task of corresponding output, such as opening all the doors or alike.
+"
+Normal State in Input Parameters,"Define the normal state of the Input. In other words, this setting defines the inactive mode of an input. For example, in case of an AC fail sensor, it remains closed in the normal circumstances. Choose ""Normally closed"" in this case. When the signals are sent for activating Input, it turns on. If sensors are to be put in an alarm mode in the normal state, choose ""Normally Open""."
+Debounce in Input parameters,"Time taken to get Input activated status in the device/software after the Input is actually activated in the real world. Time ranging from 0 to 15 (in Deci-seconds).   
+                              
+Use Case: -                                                           
+Less debounce time is highly sensitive that gives instant input activation status. More debounce time is less sensitive but will give accurate input activation status and will ignore any fluctuations.
+"
+Hold time in Input Parameters,"Time taken to get Input deactivated status in the device/software after the Input is actually deactivated in real world.Time ranging from 2 to 15 (in seconds).    
+                                       
+Use Case: -                            
+Less hold time is highly sensitive that gives instant input deactivation status. More hold time is less sensitive but will give accurate input deactivation status and will ignore any fluctuations.
+"
+Open all doors in Input Parameters,"This option can be set to send signals to the doors to perform the necessary command such as No, Close on Event Close, and Manual Close. If you choose No, it means that the doors will remain closes against the triggered Input. With Close on Event Close, which is server-based, the doors will close once the event alarm sets off after a specified time. With the Manual close option, the doors are to be closed manually once the event alarm sets off.
+
+"
+IO Mapping of Controller ,It refers to the process of connecting input signals to corresponding output signals using electronic circuits and components. The purpose of Input and output mapping is to enable electronic devices to perform specific task
+How to do IO mapping?,"1. Login to Access360 Web-application
+2. Click on the Security View icon top menu bar (3rd from the right side)
+3. Select Controller (Top menu bar) > Manage Controller
+4. Click on the ""Pen"" icon on the right-hand side of the grid view for the respective Controller
+5. Click on the ""setting"" icon (1st from the right-hand side of the grid view)
+6. Select Rule Name
+7. Select Source Type
+8. Select Input
+9. Select Validity (Time Zone)
+10. Select Output Type
+11. Click on Save to complete the configuration.
+Prerequisites:
+Controller, SIO, Readers, and Advance Configuration should be added and configured."
+IO mapping parameters,"Rule Name,Source Type, Reader, Validity (Time Zone),User Level,Output Type"
+Rule Name in IO mapping,Define a rule name for the IO mapping.
+Source Type in IO mapping,"Each of the source types has its own functionality.
+
+1. In the case of Input, the Software will map the input signals from the inputs assigned in Advanced Configuration.
+
+2. In the case of Schedule, an input will be scheduled for the defined time zone. For instance, this helps in an office environment where employees enter at 9:00 AM every day. By selecting scheduled, the Input will be sent to the Controller to activate the output every day at 9:00 AM till the defined time.
+
+3. In the case of Grant access, the input command is activated when access is granted to a user. Select the Reader which will be used to get access.
+
+4. In case of Deny Access, the input command is activated when access is denied to a user. Select the Reader which will be used to get access.
+
+5. In the case of Double Tap, the user can set the door or Relay to perform the respective action as commanded when they double tap the access card against the Reader within 5 seconds.
+
+6. In the case of the PIN command, a PIN can be set for the compatible readers in a particular format *nnnnn# to trigger the respective output for the door or Relay.
+
+7. In case of Door Held, output command is activated when door is held for a time exceeding the defined time period due to any reason. In this setting, select the Reader from the drop-down list on which this rule shall be applied.
+
+8. In the case of Door Forced, the output command is activated when the door is forcefully opened due to any reason. In this setting, select the Reader from the drop-down list on which this rule shall be applied.
+"
+Reader in IO mapping,"Select the Reader from the drop-down list with which the designated rule will be mapped.
+
+"
+Validity (Time Zone) in IO mapping,Select the validity time that indicates the time for which the input command stays activated. This can be created in time code and time zone sections.
+User Level in IO mapping,"If set, credentials with the same user level can only execute the rule."
+Output Type in IO mapping,"The functionality of each of the output types are briefly explained below:
+- If you select a door, it will be mapped with the Input and perform the assigned relay action such as unlock, permanent lock or disable lock. The Relay Mode signifies the mode in which Relay operates once the task is complete.
+ > Choose Manual Close if the Relay is to be closed manually.
+ > In the case of Toggle, the relay action will be reversed after one use. However, if the same Relay is operated from the same source, the toggle mode will not operate.
+ > Select the respective Reader to be mapped with the Relay.
+ > Once the door receives the input command, it will activate the corresponding relay output.
+- If you select Relay, it will be mapped with the Input and perform the assigned relay action such as ""turn relay on"" or ""turn relay off"". The Relay Mode signifies the mode in which Relay operates once the task is complete.
+ > Choose on manual close, timed, or toggle as per the requirement.
+ > Select the time to close the Relay if you chose timed in the further option.
+ > Select the respective output to be mapped with the Relay. These outputs are already configured in Advanced Configuration, as explained above.
+ > Once the Relay receives the input command, it will activate the corresponding relay output.
+Once all the fields are selected, click on Save to create the new rule. You can also edit this rule anytime by clicking on the Rule Name in IO Mapping."
+Monitor Section,"Monitoring Section contains Controller Status, Door Status, Interface Status, I/O (Input & Output) Status, Reader Status, Events, Reader View, Events History, Who's Where, Area Count"
+Controller Status,"In this section, you'll see a complete list of controllers in your branch or all branches. This list includes details like Controller name, controller branch, controller type, MAC Address,IP address, online status, and time of the last received message of the controller, etc."
+How to see the controller status ?,"Prerequisites:Controller(s) must be configured.                                                                                               Steps:                               
+ Login in the Security View web application
+ ""Monitor"" (Top menu bar) >>Controller Status                                                                                                  Glossary:
+Red cross = The controller is disconnected
+Green cross = The controller is connected
+"
+Possible reasons for controller disconnected,"The controller status may be shown disconnected due to the following reasons:
+1. Faulty LAN cable or network
+2. Improper functioning of controller power supply
+3. Change in controller configuration like IP address, Destination IP address
+4. Service is stopped in the Application Manager
+5. Change in controller setup in Application Manager
+6. Firewall blockage
+7. Antivirus blockage
+"
+Interface Status,This feature provides information about the status of interfaces connected to controllers.
+How to see the Interface status?,"Prerequisites:Interface must be configured
+Steps:
+? Login in the Security View web application
+? ""Monitor"" (Top menu bar) >>Interface Status
+"
+Details in Interface Status parameters ,"1. Controller Name: Displays the name of the controller.
+2. Branch: Indicates the branch associated with the controller.
+3. Type: Specifies the type of interface connected to the controller.
+4. Panel Address: Shows the panel address or number assigned to the interface.
+5. Port: Represents the port number through which the interface is connected.
+6. Online: Indicates whether the interface is currently online and operational.
+"
+Door Status,This section lets you view and manage door controls integrated with the respective controllers.
+How to see the Door status?,"Prerequisites:
+Door(s) must be configured.
+Steps:
+? Login in the Security View web application
+? ""Monitor"" (Top menu bar) >>Door Status
+
+"
+Parameters of Door Status,"* By choosing the Close All Doors option, the command will be sent to the controllers to close all the doors.
+* Door Status: Green sign = door closed, to red sign = door opened
+* Lock Status: All doors are in locked mode by default
+* Door Held Violation: If this violation occurs, the symbol changes to red. It generally happens when the door is left open over the stipulated time.                                                                                                                                                                                                              
+* Door Held Alarm: If this violation occurs, the symbol changes to red. This shows that the reader alarm for door held violation condition is ringing at the door location.
+*  Door Forced Violation: If this violation occurs, the symbol changes to red. It happens when the door is forcefully opened without a card (especially when pressing the emergency switch).
+* Door Force Alarm: If this violation occurs, the symbol changes to red. This shows that the reader alarm for door forced violation condition is ringing at the door location.
+* Tamper Violation: The Tamper violation option is shown as green when it is normal. If any tamper violation happens, the icon turns red.
+* Maintenance :
+* Reset to Normal :
+* Emergency evac :
+* Lockdown :
+* Refresh :
+
+"
+ how to manually change door status for Door Held Alarm/Door Force Alarm/ Normal Lock/ Unlock Door /Permanent Lock /Disable Lock ?,"To change the door status manually that is managed by a particular controller,                                                                                       
+? Login in the Security View web application
+? ""Monitor"" (Top menu bar) >>Door Status
+?  Select it from the drop-down list
+? Click Door Held Alarm to deactivate the alarm.
+? Click Door Force Alarm to deactivate the alarm.
+? Click Normal Lock to lock the door that a card can open.
+? Click Unlock Door to open the locked door that will not require card access to enter.
+? Click Permanent Lock, which will lock the door permanently. It will not get opened even after flashing the card having access rights.                                                                                                                                                                                                                                  ? Click Disable Lock, it will disable to lock.In this mode door will not open after flashing valid card on the reader. Also, door will not open after pressing push button.
+"
+Maintenance,This feature allows you to configure specific settings related to door behaviour and alarms. It provides options to set or clear forced open and held open masks for individual doors or branches. These masking actions can be useful during maintenance activities or specific operational requirements
+Steps to Perform Maintenance:,Login in to security view application>monitor>door status>maintenance.
+How to configure Maintenance ,"1. Select By: Choose the desired method for selecting the door or branch where the    maintenance action will be applied. There are two options:
+            * Door: Select a specific door to apply the maintenance action.
+            * Branch: Choose a specific branch to apply the maintenance action.
+
+2. Action: There are four actions that can be performed in the ""Door Mask"" 
+            maintenance feature:
+            * Forced Open Mask: Selecting this action masks the alarm when the door is 
+              forced open.
+            * Clear Forced Open Mask: This action clears the masking set for forced open 
+               events, enabling the alarm to trigger when the door is forced open.
+            * Set Held Open Mask: Choosing this action masks the alarm when the door is 
+               held open for a duration longer than the set duration
+            * Clear Held Open Mask: This action clears the masking set for held open events, allowing the alarm to trigger when the door is held open for a duration longer than the set duration
+
+"
+Reset to Normal,This feature is used to revert the system back to its normal operating state after a lockdown or emergency evacuation. It allows for the restoration of standard access control settings and locking mechanisms within the designated area
+"Steps to Perform Reset to Normal
+",Login in to security view application>monitor>door status>Reset To Normal
+How to configure Reset to Normal,"1. Select By: Choose the preferred method for selecting the area where the reset to normal action will take place. There are two options:
+            Branch: Select the desired branch where the reset to normal action will 
+               be implemented.
+            Door Action Group: Choose the desired door action group for the reset to 
+               normal action.
+
+2. Action:
+            The action for the reset to normal is to lock all doors within the selected area 
+               using the standard locking mechanism.
+            This restores the access control settings to their usual state and ensures that doors 
+               are secured as per the normal operating procedures.
+
+3. Submit: After selecting the appropriate options, click on the ""Submit"" button to initiate the reset to normal action.
+
+"
+Emergency evac,"This feature allows for a swift and coordinated unlocking of all doors within a designated area during emergency situations. 
+It enables quick and efficient evacuation of individuals from specific branches or door action groups. 
+"
+"Steps to perform Emergency Evac
+",Login in to security view application>monitor>door status>emergency evac
+How to configure Emergency evac ,"1. Select By: Choose the preferred method for selecting the area where the emergency evacuation will take place. There are two options:
+            * Branch: Select the desired branch where the emergency evacuation will 
+            be implemented.
+            * Door Action Group: Choose the desired door action group for the 
+              emergency evacuation.
+2. Action:
+            * The action for the emergency evacuation is to unlock all doors within the 
+            selected area.
+            * This means that all doors will be accessible and can be freely opened for 
+            evacuation purposes.
+
+3. Submit: After selecting the appropriate options, click on the ""Submit"" button to initiate the emergency evacuation.
+"
+Lockdown,This feature allows you to quickly secure designated areas by restricting access to doors within required areas. It is a security measure that helps control access during emergency situations or when heightened security is required.
+"Steps to perform Lockdown:
+","Login in to security view application>monitor>door status>lockdown
+"
+How to configure Lockdown ,"1. Select By: Choose the desired option for selecting the area where the lockdown will take place. There are two options:
+            * Branch: Select the desired branch where the lockdown will be implemented.
+            * Door Action Group: Choose the desired door action group for the lockdown.
+
+2. Action: Select the type of action you want to perform during the lockdown. There are two options:
+            * Permanent Lock All Doors: Access is denied when a valid issued card is presented 
+            at the reader. The door can be unlocked by pressing the REX (Request to Exit) button.
+            * Disable All Doors (Mercury/AERO only): Access is denied even when a valid 
+            issued card is presented at the reader. The door remains locked even after pressing 
+            the REX button.
+
+3. Submit: After selecting the appropriate options, click on the ""Submit"" button 
+to perform the lockdown action.
+
+"
+Refresh,"User will get updated status of below things in software such as Door Status, Lock Status
+And Alram Status etc by click on ""Refresh"" option.
+
+"
+Steps to perform Refresh:,"Login in to security view application>monitor>door status>click on Refresh button 
+(2nd option form the right-hand side of grid view) 
+
+"
+Auto Refresh,"User will get updated status of below things in software such as Door Status, Lock Status
+And Alram Status etc. User intervention is not required here, Status will get updated automatically.
+"
+Steps to perform Auto Refresh:,"Login in to security view application>monitor>door status>click one time only on ""Auto Refresh"" button (2nd option form the right-hand side of the grid view)"
+I/O (Input & Output) Status,Input/ Output Status gives a comprehensive view of all the controllers' connected and configured inputs and outputs and interfaces connected to the controllers.
+How to see I/O (Input & Output) status ?,"Prerequisites:Input and output must be configured.          Steps:
+? Login in the Security View web application
+? ""Monitor"" (Top menu bar) >>I/O Status
+"
+Parameters of Input/Output Status,"? Input Name - Name of the input configured during configuration
+? Output Name - Name of the output mapped with the input during configuration. The output corresponding to the input will get activated on an input event.
+? Input Status - As soon as the event is received as EVENT OPEN (e.g., the door opened) on the input port, the input status is shown as Activated, and on EVENT CLOSE (e.g., the door closed), the input status turns back to Normal. 
+? Output Status - As soon as the input status gets activated, the corresponding output status is shown as Activated, and on EVENT CLOSE, the output status turns back to Normal.
+? Relay Action - It specifies the relay mode of the output port as configured. The relay mode governs the output port behavior and the output port status. The relay action can be of three types - timed, close on-event close, and manual close.
+? Deactivate Output - Select the Output from the drop-down list to deactivate the output manually. In the Action Panel, when the task status shows Success, the output is 'Normal' from 'Activated.'                                                                                                                           Notes:
+Since the output is deactivated manually, the input status will remain Activated until the EVENT CLOSE message is not received at the input port."
+Reader Status,This feature provides an overview of the status of individual readers connected to controllers.
+How to see the Reader status?,"Prerequisites:Reader must be configured
+Steps:
+? Login in the Security View web application
+? ""Monitor"" (Top menu bar) >>Reader Status
+"
+Parameters of Reader status,"
+1. Manage Controller: Indicates the controller associated with the reader.
+2. Branch: Specifies the branch or location where the reader is installed.
+3. Status: Shows the current status of the reader.
+4. Tamper Status: Indicates whether the reader has been tampered or not.
+"
+Events in Monitor Section,"The Events window shows the real-time events for controllers, interfaces, inputs, outputs, doors, etc. Each event includes location, branch, person involved, and time. From this window, you can also track and handle controller status (connected/disconnected), Door Held/Forced situations, Input/Output activations, and People Inside status."
+How to see Real-time event's status ?,"Prerequisites:Controllers, interfaces, inputs, outputs, and doors must be configured.
+Steps:
+? Login in the Security View web application
+? ""Monitor"" (Top menu bar) >>Events
+"
+Features of Events in Monitor Section ,"? Check any particular event detail by clicking on it.
+? To know about the respective tabs, click on them, which will redirect the screen to the respective section screen
+"
+To view a particular event detail,"In this section, you can see event details and alarm instructions. You can add remarks, view event specifics, and deactivate alarms for that event from this section.
+? You can clear all the filters by clicking on the first Icon from the left. 
+? You can erase an event by selecting it by clicking on the second Icon from the left.
+? You can pause the events by clicking the third Icon from the left.
+"
+Reader View,"In this section, you can view reader-based events. "
+How to view and export event history,"? Login in the Security View web application
+? ""Monitor"" (Top menu bar) >>Reader View
+"
+Event History,"In this section, you can view and export all the types of events history. "
+"
+How to view and export event history?","Prerequisites: Controllers, interfaces, inputs, outputs, and doors must be configured.
+Steps:
+1 Login in the Security View web application
+2 ""Monitor"" (Top menu bar) >>Event History
+3 Select the time period to view the event history (Current day, weekly, monthly, custom).
+4 Based on Events such as Card Read, Grant Access, Deny Access, etc.
+5 Based on Alarm Class (Critical, Warning, Attention, Normal)
+6 Based on ACK - All, Acknowledged, Unacknowledged
+7 To get a CSV file for all the events, click on Export to CSV
+"
+Who's Where,"In this section, you can find the current area of the user(s) by choosing the respective fields from the drop-down list."
+How to find the current area of the user ?,"Prerequisites: Logical Area must be configured.
+Steps:
+1 Login in the Security View web application
+2 ""Monitor"" (Top menu bar) >>Who'sWhere
+3 To get the details recorded in an Excel file, click on Export to Excel
+"
+Area Count,You can use this facility to get a detailed count of the number of users available in a particular area of the respective branch
+How to check Area count ?,"Prerequisites: Logical Area must be configured.
+Steps:
+1 Login in the Security View web application
+2 ""Monitor"" (Top menu bar) >>Area Count
+3 Select the Branch from the drop-down list.
+4 Get the count of users according to the respective areas.
+5 To get the list in Excel format, click on Export to Excel.
+"
+,
+Guard Tour,"A Guard Tour System, also known as a Patrol Tour System or Security Patrol System, is a component of a Physical Access Control System (PACS) that is designed to track and manage the movements of security personnel or guards as they conduct their patrols or rounds within a designated area, such as a building, facility, or premises. The primary purpose of a Guard Tour System is to ensure that security personnel are performing their duties effectively and are covering all required checkpoints during their patrols."
+Check Point ,"In this section, you can define/ edit checkpoints and map it with readers/ inputs to start managing the guard tour system."
+How to configure Check Point?,"Prerequisites:
+Controller, Reader, and Input must be defined                                                                                                                                                    Steps:         
+1. Login in the Access360 web application
+2. Click on the Security View icon top menu bar (3rd from the right side)
+3. Select Guard Tour (Top menu bar) > Click on Add New to create a new checkpoint.
+4. Define a checkpoint name.
+5. Select the Type 
+6. Select the particular reader/input from the drop-down list to start mapping the checkpoint with it.
+7. Click on Save to complete the setting.
+"
+Guard Credentials ,"In this section, you can define and store guard credentials to enable them to get access to the checkpoints created for the guard tour."
+How to configure Guard Credentials?,"Prerequisites:
+Employee and credential must be configured
+1. Login in the Access360 web application
+2. Click on the Security View icon top menu bar (3rd from the right side)
+3. Select Guard Tour (Top menu bar) > Click on Guard Credentials                                
+4. Select Card Type from the drop-down list - Format or No Format.
+5. Enter the Card Number
+6. Choose the Format Name from the drop-down list
+7. Enter the Employee ID
+8. Click on Save to complete the setting
+"
+How to configure Tour?,"Prerequisites:
+
+Check Point must be configured
+1. Login in the Access360 web application
+2. Click on the Security View icon top menu bar (3rd from the right side)
+3. Select Manage Tour (Top menu bar) > Click on Manage Tour to Create New Tour.
+4. Specify the Tour Name 
+5. Specify the length of the tour duration in minutes.
+6. Now add checkpoints from the unassigned checkpoints to the assigned checkpoints one-by-one or all.
+7. Click on Next to continue.
+8. Depending upon your starting checkpoint, assign the time duration for each checkpoint for which the guard shall remain, which, if extended, will get notified to the respective authority.
+9. Click on Finish to complete the setting.
+"
+How to configure Tour Schedule?,"Prerequisites:
+
+Tour must be Configured.
+1. Login in the Access360 web application
+2. Click on the Security View icon top menu bar (3rd from the right side)
+3. Select Tour Schedule (Top menu bar) > Click on Add to Create New Tour Schedule
+4. Define a Schedule Tour Name
+5. Provide a Schedule tour code
+6. Choose the guard tour that is to be scheduled from the drop-down list
+7. Choose the start time and end time of the scheduled tour
+8. Click on Save to complete the setting
+"
+Logical-Area Control,"In the context of a physical access control system (PACS), Logical-Area Control refers to the ability to control and manage access to specific Logical-Areas within an organization. It contains Logical-Area Configuration, Logical-Area Mapping ,Area control Settings, Area-group, Logical Vehicle Group Mapping."
+How to Configure Logical-Area Configuration?,"1. Login to the Access360 web application.
+2. Click on the Security View icon top menu bar (3rd from the right side)
+3. Select Logical-Area Control (Top menu bar) > Click on Area Configuration
+4. Click on Add New Area
+5. ID and Name will be generated serial-wise automatically
+6. Check the Muster Point? box in case you want to activate the setting of creating an area for the users/ employees to gather in one place during an emergency
+7. Assign the area's Alias name
+8. Click on Save to complete the settings
+"
+How to Configure Logical-Area Mapping ?,"1. Login to the Access360 web application.
+2. Click on the Security View icon top menu bar (3rd from the right side)
+3. Select Logical-Area Control (Top menu bar) > Area Mapping
+4. Choose Area In and Area Out from the drop-down list
+5. Click on Save to complete the settings
+ 
+"
+How to Configure Logical-Area Control Settings?,"This section defines the various parameters that can be checked to get a detailed view of the users in the Who's Where list.
+
+1. Login to the Access360 web application.
+2. Click on the Security View icon top menu bar (3rd from the right side)
+3. Select Logical-Area Control (Top menu bar) > Settings
+4. Select and click on checkboxes according to your requirement.
+5. Click on Save to complete the settings
+"
+How to Configure Logical-Area Group?,"You can create area groups (two or more) after mapping it with readers to help the admin define areas for parking management, etc.
+ 
+1. Login to the Access360 web application.
+2. Click on the Security View icon top menu bar (3rd from the right side)
+3. Select Logical-Area Control (Top menu bar) > Area Group
+4. Click on Add New
+5. Type Group Name, Select and drag (> or >>) the areas required to be grouped from unassigned areas to assigned areas
+6. Click on Save to complete the settings
+"
+How to Configure Logical Vehicle Group Mapping,"you can map the vehicle groups (assigned in Access Group) with the area groups.
+ 
+1. Login to the Access360 web application.
+2. Click on the Security View icon top menu bar (3rd from the right side)
+3. Select Logical-Area Control (Top menu bar) > Vehicle Group Mapping
+4. Do the Vehicle Group Mapping as per your requirement and                                                     click on save to complete the settings
+"
+Door & Relay Scheduling,"This module is designed to schedule the locking/ unlocking of the door & Relay at a particular time as specified by the client's requirement.
+It is applicable for HID Vertex Controllers only.
+"
+How to Configure Door & Relay Scheduling,"To configure this you have to configure time code, time zone,Door groups, Relay Groups."
+How to Configure Door & Relay  Time Code?,"* Login to the Access360 web application.
+* Click on the Security View icon top menu bar (3rd from the right side)
+* Select Door & Relay Scheduling (Top menu bar) > Time Code
+* To create a new time code, click on ""Add New.""
+* Define appropriate shifts for the day.
+* Click on save to complete the configuration.
+"
+How to Configure Door & Relay Time Zone?,"* Login to the Access360 web application.
+* Click on the Security View icon top menu bar (3rd from the right side)
+* Select Door & Relay Scheduling (Top menu bar) > Time Zone
+* To define a new time Zone, click on ""Add New.""
+* Select appropriate time codes against each day of the week and Holiday groups(optional)
+* Click on save to complete the configuration
+ 
+"
+How to Configure Door & Relay Door Groups?,"In this section, you can create door groups to link the readers with this scheduling option.
+
+* Login to the Access360 web application.
+* Click on the Security View icon top menu bar (3rd from the right side)
+* Select Door & Relay Scheduling (Top menu bar) > Door Groups
+* Click on Add New to create a new door group
+* Define a name for the new door group
+* Select Source Type as per the requirement
+* Select Action as per the requirement
+* Select Schedule
+* Select the readers and send them to the assigned door section to complete the setting
+* Click on Save
+"
+Define Relay Groups?,"You can create relay groups in this section to link the relays with this scheduling option.
+
+* Login to the Access360 web application.
+* Click on the Security View icon top menu bar (3rd from the right side)
+* Select Door & Relay Scheduling (Top menu bar) > Relay Groups
+* Click on Add New to create a new relay group
+* Define a name for the new relay group
+* Select Source Type as per the requirement
+* Select Action as per the requirement
+* Select Schedule
+* Select the respective unassigned relays and send it to the assigned relay section to complete the setting
+* Click on Save
+"
+Questions,Answers
+Cam Details,For integration of Access Control System with the CCTV System.
+How to configure Cam Details ?,"To configure cam details follow these steps:
+1 configure cam settings
+2 configure cam door
+3 configure cam input                                                                                                          Prerequisites:
+DVMS Credentials and Camera Names are required.
+Two types of Servers are Successfully integrated and supported.
+1. Eagle Eye
+2. Avigilon Web
+"
+How to Configure Cam Settings,"1 Login in the Security View web application
+2 'Cam Details' (Top menu bar) >>Click on Cam Settings
+3 User can configure DVMS Server Setting here.
+4 Select Server Type, Server URL, User Name & Password, and click on Test Connection.
+5 Once the Test Connection is Successful, then click on Save.
+"
+Cam Door,Users can map door names with Camera
+How to Configure Cam Door,"
+1 Login in the Security View web application
+2 ""Cam Details""+B1 (Top menu bar) >> Click on Cam Door
+3 Map Door Name with Camera as per your requirement
+4 Click on Save to complete the settings
+Prerequisites: Door and Camera must be Configured
+"
+Cam Input,Users can map input names with Camera
+How to Configure Cam Input,"1 Login in the Security View web application
+2 ""Cam Details"" (Top menu bar) >> Click on Cam Input
+3 Map Input Name with Camera as per your requirement 
+4 Click on Save to complete the settings
+Prerequisites:
+Input and Camera must be Configured
+"
+Questions,Answers
+Guard Tour,"A Guard Tour System, also known as a Patrol Tour System or Security Patrol System, is a component of a Physical Access Control System (PACS) that is designed to track and manage the movements of security personnel or guards as they conduct their patrols or rounds within a designated area, such as a building, facility, or premises. The primary purpose of a Guard Tour System is to ensure that security personnel are performing their duties effectively and are covering all required checkpoints during their patrols.
+It is applicable for HID Vertex Controllers only.
+"
+How to configure a Gaurd Tour,"To configure a Gaurd Tour:
+1. Add a new Check point
+2. Add a new Guard Credentials 
+3. Create a new Tour 
+4. Create a new Tour Schedule
+"
+Check Point  in Gaurd Tour,"In this section, you can define/ edit checkpoints and map it with readers/ inputs to start managing the guard tour system.
+It is applicable for HID Vertex Controllers only."
+How to Add a new Check Point:,"1. Login in the Access360 web application
+2. Click on the Security View icon top menu bar (3rd from the right side)
+3. Select Guard Tour (Top menu bar) > Click on Add New to create a new checkpoint.
+4. Define a checkpoint name.
+5. Select the Type 
+6. Select the particular reader/input from the drop-down list to start mapping the checkpoint with it.
+7. Click on Save to complete the setting.
+Prerequisites:
+Controller, Reader, and Input must be defined"
+Guard Credentials ,"In this section, you can define and store guard credentials to enable them to get access to the checkpoints created for the guard tour.
+"
+How to Add a new Guard Credential,"* Login in the Access360 web application
+* Click on the Security View icon top menu bar (3rd from the right side)
+* Select Guard Tour (Top menu bar) > Click on Guard Credentials                                
+* Select Card Type from the drop-down list  Format or No Format.
+* Enter the Card Number
+* Choose the Format Name from the drop-down list
+* Enter the Employee ID
+* Click on Save to complete the setting
+Prerequisites:
+Employee and credential must be configured."
+Manage Tour,To Create New Tour
+How to Add a New Tour:,"* Login in the Access360 web application
+* Click on the Security View icon top menu bar (3rd from the right side)
+* Select Manage Tour (Top menu bar) > Click on Manage Tour to Create New Tour.
+* Specify the Tour Name 
+* Specify the length of the tour duration in minutes.
+* Now add checkpoints from the unassigned checkpoints to the assigned checkpoints one-by-one or all.
+* Click on Next to continue.
+* Depending upon your starting checkpoint, assign the time duration for each checkpoint for which the guard shall remain, which, if extended, will get notified to the respective authority.
+* Click on Finish to complete the setting.
+"
+Tour Schedule ,"Once a guard tour is created, it is necessary to schedule it to make it start at a specified time. When a guard tour is scheduled, a notification message is sent to the respective authority synchronized with the guard tour.
+
+"
+"
+How to Add a New Tour Schedule:
+","* Login in the Access360 web application
+* Click on the Security View icon top menu bar (3rd from the right side)
+* Select Tour Schedule (Top menu bar) > Click on Add to Create New Tour Schedule
+* Define a Schedule Tour Name
+* Provide a Schedule tour code
+* Choose the guard tour that is to be scheduled from the drop-down list
+* Choose the start time and end time of the scheduled tour
+* Click on Save to complete the setting
+Prerequisites:
+Tour must be Configured."
+Questions,Answers
+Zone Draw.,"Zone Draw is a feature that allows you to create and configure zones on a facility map by adding various features such as doors, locks, inputs, outputs, cameras, and more."
+How to Configure Zone Draw,"* Login in the Security View web application
+* Go to 'Zone Draw' (Top menu bar) >> Click on Zone Draw option and follow below these steps 1. Adding New Zones: 2. Adding Features to the Facility Map:
+3. Adding Layers: 4. Saving Changes and Adding the Zone: 5. Accessing and Updating Existing Zones:"
+How to Add New Zones:,"* To add a new zone, click on the ""Add New Zone"" button.
+* Enter a unique zone name to identify the zone.
+* Click on the ""Choose File"" button to upload the facility map image, which serves as the background for drawing the zone.
+"
+Steps to add Features to the Facility Map:,"* On the facility map, you can add the following features to define the characteristics of the zone:
+* Door Status
+* Lock Status
+* Input Status
+* Output Status
+* Area Control
+* Camera Control
+* Draw Area
+* Input String
+* Controller Status
+* Interface Status
+* Reader Status
+* To add a new feature, click on the desired feature from the available options.
+* Select the feature name from the provided options.
+* Click on the 'OK' button.
+* Drag the selected feature from the top-left corner to the desired location on the map.
+"
+Step for Adding Layers:,"* Layers allow you to organize and manage different features within the zone.
+* To add a layer, enter a name for the layer in the provided field.
+* Click on the 'Add Layer' button to create the layer.
+
+Example: Suppose you have multiple inputs and doors in a zone. You can create separate layers for inputs and doors.
+
+"
+Steps for Saving Changes and Adding the Zone:,"* Once you have added the desired features and layers to the zone, click on the 'Save Changes' button. The zone will be created with the specified features and layers."
+Steps for Accessing and Updating Existing Zones:,"* To access existing zones, select the desired zone from the 'Select Zone' option.
+* You can then update the zone by adding or modifying features and layers as needed.
+* After making the necessary changes, click on the 'Save Changes' button to update the zone.
+"
